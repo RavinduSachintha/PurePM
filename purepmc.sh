@@ -35,3 +35,4 @@ init() {
 
 # program
 main ${1:-$DEFCMD}
+
