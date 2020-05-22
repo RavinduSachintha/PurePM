@@ -8,12 +8,12 @@ BASE_URL='https://raw.githubusercontent.com/RavinduSachintha/PurePM/master/base/
 main() {
 	CMD=$1
 	PWD=$('pwd')
-	checkCommands $CMD
+	checkCommands "$CMD"
 }
 
 # check input commands
 checkCommands() {
-	if [ $CMD == 'init' ]
+	if [ "$CMD" == 'init' ]
 	then 
 		init
 	fi
@@ -34,5 +34,5 @@ init() {
 }
 
 # program
-main ${1:-$DEFCMD}
+main "${1:-$DEFCMD}"
 
