@@ -7,12 +7,12 @@ DEFCMD='null'
 main() {
 	CMD=$1
 	PWD=$('pwd')
-	checkCommands $CMD
+	checkCommands "$CMD"
 }
 
 # check input commands
 checkCommands() {
-	if [ $CMD == 'init' ]
+	if [ "$CMD" == 'init' ]
 	then 
 		init
 	fi
@@ -29,7 +29,7 @@ init() {
 }
 
 # program
-main ${1:-$DEFCMD}
+main "${1:-$DEFCMD}"
 
 #echo "####### Pure-PM C-Client #######"
 #echo
