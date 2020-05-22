@@ -5,27 +5,26 @@ DEFCMD='null'
 
 # main function
 main() {
-	CMD=$1
-	PWD=$('pwd')
-	checkCommands "$CMD"
+  CMD=$1
+  PWD=$('pwd')
+  checkCommands "$CMD"
 }
 
 # check input commands
 checkCommands() {
-	if [ "$CMD" == 'init' ]
-	then 
-		init
-	fi
+  if [ "$CMD" == 'init' ]; then
+    init
+  fi
 }
 
 # init process
 init() {
-	echo "****** PurePM C-Client ******"
-	echo "-----------------------------"
-	echo " - Project initilizing at $PWD"
-	mkdir pure_pkgs
-	mkdir src
-	mkdir dist
+  echo "****** PurePM C-Client ******"
+  echo "-----------------------------"
+  echo " - Project initilizing at $PWD"
+  mkdir pure_pkgs
+  mkdir src
+  mkdir dist
 }
 
 # program
@@ -44,17 +43,17 @@ main "${1:-$DEFCMD}"
 #echo "--------------------------------"
 
 #if [ $varChoice -eq '1' ]
-#then 
+#then
 #	make compile
 #	echo Hello
 #elif [ $varChoice -eq '2' ]
-#then 
+#then
 #	make exec
 #	echo Hello
 #elif [ $varChoice -eq '3' ]
-#then 
+#then
 #	make clean
 #	echo Hello
-#else 
+#else
 #	echo 'Please, make a correct a choice :-)'
 #fi
