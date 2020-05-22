@@ -19,6 +19,6 @@ clean:
 	rm ./dist/$(APPLICATION)
 
 $(DIRS_COMP):
-	$(MAKE) -C $@ 
+	$(MAKE) -C $@
 
 $(SRC_DIR): $(PURE_PKGS_DIR)
